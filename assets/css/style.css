@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Inter", sans-serif;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../img/21.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
