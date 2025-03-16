@@ -19,6 +19,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   z-index: 0;
+  transition: 0.7s ease-in-out;
 }
 
 .heading__logo {
@@ -48,18 +49,14 @@ body {
   padding: 10px 0px 10px 20px;
   border-radius: 30px;
   overflow: hidden;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  transition: 0.3s;
 }
 
-.content__desc::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  backdrop-filter: blur(10px); 
-  background: rgba(255, 255, 255, 0.1); 
-  z-index: -1; 
+.content__desc:hover {
+  scale: 1.1;
+  background: rgba(255, 255, 255, 0.5);
 }
 
 .content__name {
@@ -90,6 +87,16 @@ body {
   border: 2px solid #000;
   border-radius: 5px;
   text-decoration: none;
+  transition: 0.3s;
+}
+
+.content__more:hover {
+  background: rgba(74, 74, 74, 0.5);
+  scale: 1.1;
+}
+
+.content__more:active {
+  scale: 0.9;
 }
 
 .content__main {
@@ -105,4 +112,46 @@ body {
   width: 300px;
   height: 400px;
   object-fit: cover;
+  transition: 0.3s;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.content__main--img:active {
+  scale: 0.9;
+}
+
+.content__nav--common {
+  position: relative;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background: rgba(225, 224, 224, 0.2);
+  border: 1px solid #fff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.content__nav--common:hover {
+  background: rgba(74, 74, 74, 0.5);
+  scale: 1.1;
+}
+
+.content__nav--common:active {
+  scale: 0.9;
+}
+
+.content__nav--common:hover svg {
+  color: #fff;
+}
+
+.content__nav {
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }

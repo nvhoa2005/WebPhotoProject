@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>WebPhotoProject</title>
     <!-- embed font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,11 +19,12 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
+    <!-- main -->
     <main class="main">
       <div class="heading">
         <img
           src="./assets/img/bmw-removebg-preview.png"
-          alt=""
+          alt="logo"
           class="heading__logo"
         />
       </div>
@@ -42,6 +43,12 @@
           </div>
           <figure class="content__main">
             <img
+              src="./assets/img/22.jpg"
+              alt="img"
+              class="content__main--img"
+            />
+
+            <img
               src="./assets/img/21.jpg"
               alt="img"
               class="content__main--img"
@@ -55,6 +62,12 @@
 
             <img
               src="./assets/img/19.jpg"
+              alt="img"
+              class="content__main--img"
+            />
+
+            <img
+              src="./assets/img/18.jpg"
               alt="img"
               class="content__main--img"
             />
@@ -177,11 +190,10 @@
               class="content__main--img"
               loading="lazy"
             />
-
           </figure>
         </div>
         <div class="content__nav">
-          <div class="content__nav--left">
+          <div class="content__nav--common content__nav--left">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="6"
@@ -191,13 +203,13 @@
             >
               <path
                 d="M5.5 1L0.5 6L5.5 11"
-                stroke="white"
+                stroke="currentColor"
                 stroke-linecap="round"
                 stroke-linejoin="round"
               />
             </svg>
           </div>
-          <div class="content__nav--right">
+          <div class="content__nav--common content__nav--right">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="6"
@@ -207,7 +219,7 @@
             >
               <path
                 d="M0.5 1L5.5 6L0.5 11"
-                stroke="white"
+                stroke="currentColor"
                 stroke-linecap="round"
                 stroke-linejoin="round"
               />
@@ -216,5 +228,8 @@
         </div>
       </article>
     </main>
+
+    <!-- js -->
+    <script src="main.js"></script>
   </body>
 </html>
