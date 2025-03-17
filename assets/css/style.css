@@ -12,6 +12,7 @@ body {
 }
 
 .main {
+  will-change: background-image;
   width: 100vw;
   height: 100vh;
   background-image: url("../img/22.jpg");
@@ -107,6 +108,7 @@ body {
 }
 
 .content__main--img {
+  will-change: transform;
   border-radius: 30px;
   display: block;
   width: 300px;
@@ -114,7 +116,8 @@ body {
   object-fit: cover;
   transition: 0.3s;
   cursor: pointer;
-  transition: 0.4s;
+  transition: 0.7s ease-in-out;
+  backface-visibility: hidden;
 }
 
 .content__main--img:active {
