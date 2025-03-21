@@ -3,13 +3,13 @@ let bg = document.querySelector(".main");
 let images = document.querySelectorAll(".content__main--img");
 let contentMain = document.querySelector(".content__main");
 let contentDesc = document.querySelector(".content__move");
-let contentPenguin = document.querySelector(".content__main--move")
+let contentPenguin = document.querySelector(".content__penguin")
 let numberOfImage = images.length;
 let currentImage = numberOfImage;
 let pointer = 1;
 let imageDistanceMove = 0;
 let descImageDistanceMove = 0;
-let contentPenguinDistanceMove = 1050;
+let contentPenguinDistanceMove = 80;
 
 function preloadImages() {
     let imagePaths = [];
@@ -83,10 +83,10 @@ navPrev.addEventListener("click", () => {
     descImageDistanceMove += 274.188;
     contentDesc.style.transform = `translateY(${descImageDistanceMove}px)`
     if(pointer == 1) {
-      contentPenguinDistanceMove = 1050
+      contentPenguinDistanceMove = 80
       contentPenguin.style.left = `${contentPenguinDistanceMove}px`
     } else if (pointer == 2) {
-      contentPenguinDistanceMove = 1370
+      contentPenguinDistanceMove = 400
       contentPenguin.style.left = `${contentPenguinDistanceMove}px`
     }
     changeBackgroundDebounced(currentImage);
@@ -108,10 +108,10 @@ navNext.addEventListener("click", () => {
     descImageDistanceMove -= 274.188;
     contentDesc.style.transform = `translateY(${descImageDistanceMove}px)`
     if(pointer == 2) {
-      contentPenguinDistanceMove = 1370
+      contentPenguinDistanceMove = 400
       contentPenguin.style.left = `${contentPenguinDistanceMove}px`
     } else if (pointer == 3) {
-      contentPenguinDistanceMove = 1690
+      contentPenguinDistanceMove = 720
       contentPenguin.style.left = `${contentPenguinDistanceMove}px`
     }
     changeBackgroundDebounced(currentImage);
