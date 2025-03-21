@@ -113,18 +113,18 @@ body {
 }
 
 .content__main {
-  position: relative;
   display: flex;
   width: 50%;
+  overflow: hidden;
 }
 
 .content__penguin {
-  z-index: 10;
   position: absolute;
-  left: 80px;
-  top: -140px;
-  width: 150px;
-  height: 150px;
+  z-index: 10;
+  width: 100px;
+  height: 100px;
+  top: -100px;
+  left: 1050px;
   transition: 0.7s ease-in-out;
 }
 
@@ -132,7 +132,7 @@ body {
   display: flex;
   width: 100%;
   gap: 20px;
-  overflow: hidden;
+  transition: 0.7s ease-in-out;
 }
 
 .content__main--img {

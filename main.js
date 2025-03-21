@@ -4,12 +4,13 @@ let images = document.querySelectorAll(".content__main--img");
 let contentMain = document.querySelector(".content__main");
 let contentDesc = document.querySelector(".content__move");
 let contentPenguin = document.querySelector(".content__penguin")
+let contentMainMove = document.querySelector(".content__main--move")
 let numberOfImage = images.length;
 let currentImage = numberOfImage;
 let pointer = 1;
 let imageDistanceMove = 0;
 let descImageDistanceMove = 0;
-let contentPenguinDistanceMove = 80;
+let contentPenguinDistanceMove = 1050;
 
 function preloadImages() {
     let imagePaths = [];
@@ -23,7 +24,7 @@ function preloadImages() {
     });
 }
 
-preloadImages(); // Gọi ngay khi trang tải xong
+preloadImages(); 
 
 function debounce(func, delay) {
   let timer;
@@ -42,16 +43,18 @@ function changeBackground(number) {
 
 function imageMovePrev() {
   imageDistanceMove += 320;
-  images.forEach((image) => {
-    image.style.transform = `translate3d(${imageDistanceMove}px, 0, 0)`;
-  })
+  // images.forEach((image) => {
+  //   image.style.transform = `translate3d(${imageDistanceMove}px, 0, 0)`;
+  // })
+  contentMainMove.style.transform = `translate3d(${imageDistanceMove}px, 0, 0)`
 }
 
 function imageMoveNext() {
   imageDistanceMove -= 320;
-  images.forEach((image) => {
-    image.style.transform = `translate3d(${imageDistanceMove}px, 0, 0)`;
-  });
+  // images.forEach((image) => {
+  //   image.style.transform = `translate3d(${imageDistanceMove}px, 0, 0)`;
+  // })
+  contentMainMove.style.transform = `translate3d(${imageDistanceMove}px, 0, 0)`
 }
 
 images.forEach((image) => {
@@ -83,10 +86,10 @@ navPrev.addEventListener("click", () => {
     descImageDistanceMove += 274.188;
     contentDesc.style.transform = `translateY(${descImageDistanceMove}px)`
     if(pointer == 1) {
-      contentPenguinDistanceMove = 80
+      contentPenguinDistanceMove = 1050
       contentPenguin.style.left = `${contentPenguinDistanceMove}px`
     } else if (pointer == 2) {
-      contentPenguinDistanceMove = 400
+      contentPenguinDistanceMove = 1370
       contentPenguin.style.left = `${contentPenguinDistanceMove}px`
     }
     changeBackgroundDebounced(currentImage);
@@ -108,10 +111,10 @@ navNext.addEventListener("click", () => {
     descImageDistanceMove -= 274.188;
     contentDesc.style.transform = `translateY(${descImageDistanceMove}px)`
     if(pointer == 2) {
-      contentPenguinDistanceMove = 400
+      contentPenguinDistanceMove = 1370
       contentPenguin.style.left = `${contentPenguinDistanceMove}px`
     } else if (pointer == 3) {
-      contentPenguinDistanceMove = 720
+      contentPenguinDistanceMove = 1690
       contentPenguin.style.left = `${contentPenguinDistanceMove}px`
     }
     changeBackgroundDebounced(currentImage);
